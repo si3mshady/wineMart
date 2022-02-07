@@ -22,7 +22,7 @@ const NFTtokenResource = ({ID,Name,Country, Region,Year,Price,URL,Rating}) => {
                 <CardMedia
                     
                     component="img"                 
-                    image={URLgit acçc}
+                    image={URL}
                     alt="Name"
                 />
                 <CardContent style={{lineHeight: '20Hpx'}}>
