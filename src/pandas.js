@@ -7,15 +7,12 @@ const { v4  } = require('uuid');
 const cseId = '522ec7ef7f924440d'
 const apikey = 'AIzaSyDLmuRviT1sKD0N75RjfY9gkSrHLRKbFDw'
 const client = new GoogleImages(cseId, apikey);
-var arr = []
+
 
 const parseCSV = () => {
     df = pd.readCsv('./Red.csv')
     const wineList = df
-  
      return Array.from(wineList).splice(0,50)   
-
-
 }  
 
 var wl = parseCSV()

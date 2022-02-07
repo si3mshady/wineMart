@@ -1,6 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
+
 describe("WineMart", function () {
   it("create nft market, create nft, put nft on market and make a sale", async function () {
     const WineMart = await ethers.getContractFactory("WineMart");
@@ -17,22 +18,20 @@ describe("WineMart", function () {
     listingPrice  = listingPrice.toString()
 
     const auctionPrice = ethers.utils.parseUnits('100', 'ether')
-
-
     await nft.createToken('https://www.1.si3mshady.com')
     await nft.createToken('https://www.2.si3mshady.com')
 
     await winemart.createMarketItem(nftContractAddress, 1,auctionPrice, {value: listingPrice} )
     await winemart.createMarketItem(nftContractAddress, 2,auctionPrice, {value: listingPrice} )
     
+ const [_, buyerAddress, buyer2] = await ethers.getSigners() #walletaccounts
+ 
+ console.log(buyer2)
 
-  // test accounts 
- const [_, buyerAddress] = await ethers.getSigners()
-  
  await winemart.connect(buyerAddress).createMarketSale(nftContractAddress, 1, {value: auctionPrice} )
 
  const items = await winemart.fetchMarketItems()
- console.log(items)
+console.log(items)
 
 
 
