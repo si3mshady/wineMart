@@ -7,21 +7,6 @@ import {WineContext} from './context/wineContext'
 import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
 
-// import { ChainContext}  from './context/Context'
-// import {data} from './MasterWineList.js'
-
-
-// Name: key.Name,
-// Country: key.Country,
-// Region: key.Region,
-// Rating: key.Rating,
-// Price: key.Price,
-// Year: key.Year,
-// URL: images[0].url,
-// ID: v4()
-
-
-
 function App() {
 
   const {starterData} = useContext(WineContext)
@@ -30,10 +15,7 @@ function App() {
  
   return (
     <>
-     {/* <div style={{width:'100%',height:'20px', backgroundColor:'blue'}}>NAVBAR</div>  */}
-     {/* <div style={{display: 'flex'}}> */}
 
-    {/* <div style={{backgroundColor:'red'}}>SIDEBAR</div> */} 
 
     <NavBar />
     <div style={{display: 'flex'}}>

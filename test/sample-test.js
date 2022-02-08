@@ -24,7 +24,7 @@ describe("WineMart", function () {
     await winemart.createMarketItem(nftContractAddress, 1,auctionPrice, {value: listingPrice} )
     await winemart.createMarketItem(nftContractAddress, 2,auctionPrice, {value: listingPrice} )
     
- const [_, buyerAddress, buyer2] = await ethers.getSigners() #walletaccounts
+ const [_, buyerAddress, buyer2] = await ethers.getSigners() //walletaccounts
  
  console.log(buyer2)
 

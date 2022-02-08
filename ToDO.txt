@@ -1,0 +1,6 @@
+implement eth converter 
+
+add styling for navbar 
+add different views 
+
+Add react router to display different views 
