@@ -19,7 +19,7 @@ export const WineProvider = ({children}) => {
     setData(result)
        
 
-    }   )
+    },[])
    
 
     return (

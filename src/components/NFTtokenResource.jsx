@@ -8,15 +8,12 @@ import '../App.css'
 import {useContext} from 'react'
 
 // import { ChainContext}  from '../context/Context'
-
-
-
 const NFTtokenResource = ({ID,Name,Country, Region,Year,Price,URL,Rating}) => {
     // const { connectWallet, makePurchase, connectedAccount } = useContext(ChainContext)
     
     
     return (
-        <div style={{margin: "10px", textAlign: "center",  height: "100%", boxShadow: "10px 5px 5px gray"}}>
+        <div style={{margin: "10px", textAlign: "center", boxShadow: "10px 5px 5px gray"}}>
      
         <Card  sx={{ height:350, width: "200px" }}>
                 <CardMedia
@@ -30,9 +27,9 @@ const NFTtokenResource = ({ID,Name,Country, Region,Year,Price,URL,Rating}) => {
                     {Name}
                     </Typography>
 
-                    <Typography variant="p" color="text.secondary">
+                    {/* <Typography variant="p" color="text.secondary">
                     {Year}
-                    </Typography>
+                    </Typography> */}
 
                     <Typography variant="p"  style={{display: "block", fontFamily: 'Permanent Marker'}}  color="text.secondary">
                     ${Price}

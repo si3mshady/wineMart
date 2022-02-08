@@ -2,10 +2,10 @@ import {useState, useEffect, useContext} from 'react'
 import './App.css';
 import NFTtokenResource from './components/NFTtokenResource'
 
-// import {data} from './MasterWineList'
 import Box from '@mui/material/Box';
 import {WineContext} from './context/wineContext'
-
+import NavBar from './components/NavBar'
+import SideBar from './components/SideBar'
 
 // import { ChainContext}  from './context/Context'
 // import {data} from './MasterWineList.js'
@@ -29,17 +29,28 @@ function App() {
   
  
   return (
-    <Box sx={{ width: '100%',
-        display: 'flex',
+    <>
+     {/* <div style={{width:'100%',height:'20px', backgroundColor:'blue'}}>NAVBAR</div>  */}
+     {/* <div style={{display: 'flex'}}> */}
+
+    {/* <div style={{backgroundColor:'red'}}>SIDEBAR</div> */} 
+
+    <NavBar />
+    <div style={{display: 'flex'}}>
+
+    <SideBar />
+   
+    <Box  sx={{ 
+        display: 'flex',        
         flexWrap: 'wrap',     
-        justifyContent:'space-around'}}> 
+        justifyContent:'space-evenly'}}> 
        {      
 
 starterData.map(event => (<NFTtokenResource key={event.ID}
         Name={event.Name}
         Price={event.Price}  
         URL={event.URL}    
-        Year={event.Year}
+        // Year={event.Year}
         ID = {event.ID}
         Rating = {event.Rating}
         />))
@@ -47,6 +58,13 @@ starterData.map(event => (<NFTtokenResource key={event.ID}
      }            
       
      </Box>
+
+
+
+    </div>
+    
+
+     </>
   );
 }
 
