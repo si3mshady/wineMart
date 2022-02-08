@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import {WineProvider} from './context/wineContext'
 
 ReactDOM.render(
-  <React.StrictMode>
+
+  <WineProvider>
+
+<React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+    
+  </WineProvider>
+ ,
   document.getElementById('root')
 );
 

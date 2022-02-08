@@ -16,7 +16,7 @@ const NFTtokenResource = ({ID,Name,Country, Region,Year,Price,URL,Rating}) => {
     
     
     return (
-        <div style={{margin: "10px", height: "100%", boxShadow: "10px 5px 5px gray"}}>
+        <div style={{margin: "10px", textAlign: "center",  height: "100%", boxShadow: "10px 5px 5px gray"}}>
      
         <Card  sx={{ height:350, width: "200px" }}>
                 <CardMedia

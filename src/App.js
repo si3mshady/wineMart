@@ -1,10 +1,14 @@
 import {useState, useEffect, useContext} from 'react'
 import './App.css';
 import NFTtokenResource from './components/NFTtokenResource'
-import {data} from './MasterWineList'
-import Box from '@mui/material/Box';
-// import { ChainContext}  from './context/Context'
 
+// import {data} from './MasterWineList'
+import Box from '@mui/material/Box';
+import {WineContext} from './context/wineContext'
+
+
+// import { ChainContext}  from './context/Context'
+// import {data} from './MasterWineList.js'
 
 
 // Name: key.Name,
@@ -19,6 +23,9 @@ import Box from '@mui/material/Box';
 
 
 function App() {
+
+  const {starterData} = useContext(WineContext)
+
   
  
   return (
@@ -28,7 +35,7 @@ function App() {
         justifyContent:'space-around'}}> 
        {      
 
-        data.map(event => (<NFTtokenResource key={event.ID}
+starterData.map(event => (<NFTtokenResource key={event.ID}
         Name={event.Name}
         Price={event.Price}  
         URL={event.URL}    
