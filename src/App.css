@@ -1,3 +1,12 @@
+body {
+    margin: 0;
+}
+
 img {
-    height: 63%;
+    height: 53%;
+}   
+
+.css-o69gx8-MuiCardMedia-root {
+    object-fit: scale-down !important;
+    margin-top: 10%;
 }

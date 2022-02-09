@@ -7,13 +7,14 @@ import Typography from '@mui/material/Typography';
 import '../App.css'
 import {useContext} from 'react'
 
+
 // import { ChainContext}  from '../context/Context'
 const NFTtokenResource = ({ID,Name,Country, Region,Year,Price,URL,Rating}) => {
     // const { connectWallet, makePurchase, connectedAccount } = useContext(ChainContext)
     
-    
+    // boxShadow: "10px 5px 5px gray"
     return (
-        <div style={{margin: "10px", textAlign: "center", boxShadow: "10px 5px 5px gray"}}>
+        <div style={{margin: "10px", textAlign: "center", }}>
      
         <Card  sx={{ height:350, width: "200px" }}>
                 <CardMedia
